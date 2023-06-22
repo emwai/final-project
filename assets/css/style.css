@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8f8f8f;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #4f4f4f;
+}
+
+::-webkit-scrollbar-track {
+    background: #d6d6d6;
+    border: 0px none #ffffff;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #cfcfcf;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #949494;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    transition: .75s;
+    
+}
+h1 {
+    font-size: 4rem;
+}
+.main{
+    padding: 0 3rem 3rem 3rem;
+    min-height: 100vh;
+}
+.home-title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    /* margin-top: 2rem; */
+}
+
+.home-halo{
+    font-family: 'Dancing Script', cursive;
+    font-size:10rem;
+    height: 12rem;
+}
+
+.home-subtitle{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+.social-account{
+    top: 50%;
+    width: fit-content;
+    left: -50px;
+    transition: .5s;
+}
+.social-account:hover{
+    left: -5px;
+}
+.link-account a{
+    padding: 0 .7rem 0 .4rem;
+    transition: .3s;
+}
+.link-account a:hover{
+    color:#f3992cfd;
+}
+
+.down{
+    transition: .5s;
+    width: fit-content;
+    animation: scroll 4s ease-in-out infinite;
+}
+
+.down:hover{
+    color:#f3992cfd;
+    transform: translateY(2rem) scale(1.2);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        /* color:#f3992cfd; */
+        transform:translateY(2rem) scale(1.2);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.bg-home{
+    position: absolute;
+    width:99%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -999;
+    opacity: .25;
+}
+section{
+    margin-right: 15%;
+    margin-left: 15%;
+}
+.about-title{
+    transition: .2s;
+    font-size: 6rem;
+}
+[data-bs-theme=dark] {
+    --bs-body-color : #f1f1f1 !important;
+}
+
+[data-bs-theme=dark] .form-switch .form-check-input:checked::after{
+    background-color:#f3992cfd !important;
+}
+[data-bs-theme=dark] [type=checkbox]::before{
+    border : 2px solid #f1f1f1 !important;
+}
+.hover-text{
+    transition: .2s;
+    cursor: pointer;
+}
+.hover-text:hover{
+    color:#f3992cfd ;
+}
+@media (max-width: 768px) {
+    section{
+        margin-right: auto;
+        margin-left: auto;
+    } 
+    .main{
+        padding: 0;
+    }
+    .home-halo{
+        font-size: 6rem;
+        height: 6rem;
+    }
+    #home h1{
+        font-size: 2.5rem !important;
+    }
+    .about-title{
+        font-size: 4rem;
+    }
+    #about img{
+        padding: 2rem;
+    }
+}
